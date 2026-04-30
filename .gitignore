@@ -1,0 +1,17 @@
+node_modules
+dist
+.env
+.DS_Store
+*.log
+coverage
+*.tsbuildinfo
+
+backend/node_modules
+backend/dist
+backend/.env
+
+frontend/node_modules
+frontend/dist
+frontend/.env
+frontend/vite.config.js
+frontend/vite.config.d.ts
