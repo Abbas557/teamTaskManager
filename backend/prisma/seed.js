@@ -1,6 +1,6 @@
-import 'dotenv/config';
-import { PrismaClient, ProjectRole, TaskPriority, TaskStatus, UserRole } from '@prisma/client';
-import * as bcrypt from 'bcrypt';
+require('dotenv/config');
+const { PrismaClient, ProjectRole, TaskPriority, TaskStatus, UserRole } = require('@prisma/client');
+const bcrypt = require('bcrypt');
 
 const prisma = new PrismaClient();
 
@@ -88,6 +88,5 @@ main()
   })
   .catch(async (error) => {
     console.error(error);
-    await prisma.$disconnect();
-    process.exit(1);
+    prisma.$disconnect().finally(() => process.exit(1));
   });
