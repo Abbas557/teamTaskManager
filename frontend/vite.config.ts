@@ -6,4 +6,7 @@ export default defineConfig({
   server: {
     port: 5173,
   },
+  preview: {
+    allowedHosts: ['lively-flexibility-production-6d73.up.railway.app'],
+  },
 });
